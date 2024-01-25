@@ -1,17 +1,26 @@
-let slideindex = 1;
-showDivs(slideindex);
+let imgindex = 1;
+showimg(imgindex);
 
 function plusdivs(n) {
-    showDivs(slideindex += n);
+  imgindex = imgindex + n;
+  showimg(imgindex);
+}
+
+function showimg(n) {
+  let i;
+  let img = document.querySelectorAll(".slideimg"); // Add dot before "slideimg"
+  
+  if (n > img.length) {
+    imgindex = 1;
   }
   
-  function showDivs(n) {
-    var i;
-    var x = document.getElementsByClassName("slideimg");
-    if (n > x.length) {slideindex = 1}
-    if (n < 1) {slideindex = x.length}
-    for (i = 0; i < x.length; i++) {
-      x[i].style.display = "none";  
-    }
-    x[slideindex-1].style.display = "block";  
+  if (n < 1) {
+    imgindex = img.length;
+  }
+  
+  for (i = 0; i < img.length; i++) {
+    img[i].style.display = "none";
+  }
+  
+  img[imgindex - 1].style.display = "block";
 }

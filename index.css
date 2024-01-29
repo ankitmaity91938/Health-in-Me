@@ -5,6 +5,7 @@
 h1{
     text-align: center;
     text-decoration: underline;
+    margin:10px;
 }
 body{
     
@@ -55,7 +56,7 @@ br{
     height: 20px;
 }
 #service{
-    height: 50vh;
+   
     margin:auto;
 }
 .sertype{
@@ -72,12 +73,20 @@ br{
     padding:30px
 }
 .box img{
-    height:40px;
+  height: 40px;
 
 }
 #about{
-    height:50vh;
+    height:10vh;
+    text-align: center;
+    
+    
 }
+#contact{
+    height:10vh;
+    text-align: center;
+}
+
 .footer {
     padding:10px;
     height:30vh;
